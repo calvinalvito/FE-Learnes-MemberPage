@@ -3,10 +3,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import courses from "constants/api/courses";
-
+import { useHistory } from "react-router-dom";
 import ServerError from "pages/500";
 import Loading from "parts/Loading";
 
+const history = useHistory();
 export default function Joined({ history, match }) {
   const [state, setstate] = useState(() => ({
     isLoading: true,
