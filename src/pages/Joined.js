@@ -3,10 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import courses from "constants/api/courses";
-import { useHistory } from "react-router-dom";
+
 import ServerError from "pages/500";
 import Loading from "parts/Loading";
-
 
 export default function Joined({ history, match }) {
   const [state, setstate] = useState(() => ({
@@ -26,7 +25,7 @@ export default function Joined({ history, match }) {
       if (error?.response?.data?.message === "user already take this course")
         history.push(`/courses/${match.params.class}`);
     }
-  }, [match.params.class], history);
+  }, [match.params.class]);
 
   useEffect(() => {
     joining();
