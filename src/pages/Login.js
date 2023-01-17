@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 import Header from "parts/Header";
-import Footer from "parts/Footer";
 import LoginForm from "parts/LoginForm";
 
 export default function Login() {
